@@ -1,4 +1,3 @@
-// Definir la clase Colchon
 class Colchon {
     constructor(tipo, medida, precio, marca) {
         this.tipo = tipo;
@@ -76,20 +75,11 @@ function mostrarColchonesEnDOM(colchonesMostrados) {
         colchonesList.textContent = "No se encontraron colchones con esa medida.";
     }
 }
-
-// Función para agregar un colchón al carrito
-function agregarAlCarrito(colchon) {
-    carrito.push(colchon);
-    actualizarCarrito();
-}
-
-
-// Función para actualizar la lista del carrito en el DOM
+// funcion para actualizar el carrito con los precios segun los articulos que agregue
 function actualizarCarrito() {
     carritoList.innerHTML = ""; // Limpiar la lista antes de mostrar los productos
-
     let total = 0;
-
+    
     carrito.forEach(colchon => {
         const colchonCarritoDiv = document.createElement("div");
         colchonCarritoDiv.classList.add("colchon-carrito");
@@ -111,9 +101,20 @@ function actualizarCarrito() {
         carritoList.appendChild(colchonCarritoDiv);
 
         total += colchon.precio;
+        
     });
+    localStorage.setItem("carrito", JSON.stringify(carrito));
 
     totalElement.textContent = `Total: $${total}`;
+
+}
+
+
+//Funcion para agregar colchon al carrito 
+
+function agregarAlCarrito(colchon) {
+    carrito.push(colchon);
+    actualizarCarrito();
 }
 
 
@@ -137,12 +138,6 @@ buscarBtn.addEventListener("click", () => {
 window.addEventListener("load", () => {
     mostrarColchonesEnDOM(colchones);
 });
-
-// Guardar el carrito en localStorage al actualizarlo
-function actualizarCarrito() {
-    // ...
-    localStorage.setItem("carrito", JSON.stringify(carrito));
-}
 
 // Recuperar el carrito de localStorage al cargar la página
 window.addEventListener("load", () => {
