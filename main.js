@@ -24,7 +24,6 @@ const colchones = [
     new Colchon("Espuma De Alta Densidad", "King", 30000, "Cannon"),
     new Colchon("Resosrtes Continuos", "King", 36000, "Maxiking")
 ];
-
 // Obtener referencias a elementos del DOM
 const medidaSelect = document.getElementById("medida");
 const buscarBtn = document.getElementById("buscarBtn");
@@ -84,6 +83,7 @@ function agregarAlCarrito(colchon) {
     actualizarCarrito();
 }
 
+
 // Función para actualizar la lista del carrito en el DOM
 function actualizarCarrito() {
     carritoList.innerHTML = ""; // Limpiar la lista antes de mostrar los productos
@@ -116,6 +116,7 @@ function actualizarCarrito() {
     totalElement.textContent = `Total: $${total}`;
 }
 
+
 // Función para quitar un colchón del carrito
 function quitarDelCarrito(colchon) {
     const index = carrito.indexOf(colchon);
@@ -134,5 +135,21 @@ buscarBtn.addEventListener("click", () => {
 
 // Mostrar todos los colchones en el DOM al cargar la página
 window.addEventListener("load", () => {
+    mostrarColchonesEnDOM(colchones);
+});
+
+// Guardar el carrito en localStorage al actualizarlo
+function actualizarCarrito() {
+    // ...
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+}
+
+// Recuperar el carrito de localStorage al cargar la página
+window.addEventListener("load", () => {
+    const carritoGuardado = localStorage.getItem("carrito");
+    if (carritoGuardado) {
+        carrito.push(...JSON.parse(carritoGuardado));
+        actualizarCarrito();
+    }
     mostrarColchonesEnDOM(colchones);
 });
