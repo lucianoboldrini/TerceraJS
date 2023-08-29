@@ -1,8 +1,10 @@
-/* todos los etilos de la parte de la tienda */
+/* todos los estilos de la sección de la tienda */
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 header {
@@ -39,64 +41,71 @@ option {
 }
 
 button#buscarBtn {
-
-  background-color: #4CAF50;
-  color:white ;
-  border:none ;
-  padding :0.5em 1em ;
-  cursor:pointer ;
-  height :3.3em ;
+    background-color: #4CAF50; 
+    color:white ;
+    border:none ;
+    padding :0.5em 1em ;
+    cursor:pointer ;
+    height :3.3em ;
+    transition: all .2s ease-in-out;
 }
 
 button#buscarBtn:hover {
- background-color:#3e8e41
-}
-
-button#buscarBtn:active {
- background-color:#3e8e41 ;
- box-shadow :0 1px #666 ;
- transform :translateY(1px)
+    transform: scale(1.1);
 }
 
 .colchon {
- background-color:#f9f9f9 ;
- border :1px solid #ddd ;
- padding :1em ;
- margin-bottom :1em
+    background-color:#f9f9f9 ;
+    border :1px solid #ddd ;
+    padding :1em ;
+    margin-bottom :1em
 }
 
 .colchon h2 {
- margin-top :0
+    margin-top :0
 }
 
 .colchon button {
- background-color:#4CAF50 ;
- color:white ;
- border:none ;
- padding :0.5em 1em ;
- cursor:pointer
+    background-color:#4CAF50 ;
+    color:white ;
+    border:none ;
+    padding :0.5em 1em ;
+    cursor:pointer
+}
+.colchon-carrito button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  margin-right: 0.5em;
+}
+#finalizarBtn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  margin-top: 1em;
 }
 
+#finalizarBtn:hover {
+  transform: scale(1.1);
+}
 .colchon button:hover {
- background-color:#3e8e41
-}
-
-.colchon button:active {
- background-color:#3e8e41 ;
- box-shadow :0 1px #666 ;
- transform :translateY(1px)
+    transform: scale(1.1);
 }
 
 #carrito {
- border :1px solid #ddd ;
- padding :1em ;
- background-color:#f9f9f9 ;
- position :fixed ;
- right :2em ;
- top :2em 
+    border :1px solid #ddd ;
+    padding :1em ;
+    background-color:#f9f9f9 ;
+    position :fixed ;
+    right :2em ;
+    top :2em 
 }
 
 #carritoList {
- max-height :300px ;
- overflow:auto
+    max-height :300px ;
+    overflow:auto
 }

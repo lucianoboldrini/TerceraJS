@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Merino Muebles - Colchones</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
         <h1>Merino Muebles</h1>
@@ -14,7 +16,9 @@
 
     <section>
         <h2>Nuestros Productos</h2>
+        <label for="medida">Medida:</label>
         <select id="medida">
+            <option value="todas">Todas</option>
             <option value="1 plaza">1 plaza</option>
             <option value="1 plaza y media">1 plaza y media</option>
             <option value="2 plazas">2 plazas</option>
@@ -30,10 +34,14 @@
         <div id="carrito">
             <div id="carritoList"></div>
             <p id="total">Total: $0</p>
+            <button id="finalizarBtn">Finalizar Compra</button>
         </div>
     </section>
 
+    
+   
+<script src="main.js"></script>
 
-    <script src="main.js"></script>
 </body>
+
 </html>
