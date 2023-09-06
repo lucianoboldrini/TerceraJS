@@ -1,0 +1,171 @@
+[
+    {
+        "id": 1,
+        "tipo": "Espuma De Alta Densidad",
+        "medida": "1 plaza",
+        "precio": 10000,
+        "marca": "Cannon",
+        "imagen": "sueñodorado.jpeg"
+
+    },
+    {
+        "id": 2,
+        "tipo": "Resosrtes Continuos",
+        "medida": "1 plaza",
+        "precio": 12000,
+        "marca": "Maxiking",
+        "imagen": "maxiking.jpeg"
+    },
+    {
+        "id": 3,
+        "tipo": "Resosrtes Continuos",
+        "medida": "1 plaza",
+        "precio": 188000,
+        "marca": "Super Descanso",
+        "imagen": "superdescanso.jpeg"
+    },
+    {
+        "id": 4,
+        "tipo": "Espuma De Alta Densidad",
+        "medida": "1 plaza",
+        "precio": 120600,
+        "marca": "Elegante",
+        "imagen": "sueñodorado.jpeg"
+    },
+    {
+        "id": 5,
+        "tipo": "Espuma De Alta Densidad",
+        "medida": "1 plaza y media",
+        "precio": 15200,
+        "marca": "Sueño Dorado",
+        "imagen": "sueñodorado.jpeg"
+    },
+    {
+        "id": 6,
+        "tipo": "Espuma De Alta Densidad",
+        "medida": "1 plaza y media",
+        "precio": 150000,
+        "marca": "Maxiking",
+        "imagen": "sueñodorado.jpeg"
+    },
+    {
+        "id": 7,
+        "tipo": "Espuma De Alta Densidad",
+        "medida": "1 plaza y media",
+        "precio": 207000,
+        "marca": "Elegante",
+        "imagen": "sueñodorado.jpeg"
+    },
+    {
+        "id": 8,
+        "tipo": "Espuma De Alta Densidad",
+        "medida": "1 plaza y media",
+        "precio": 81000,
+        "marca": "Cannon",
+        "imagen": "sueñodorado.jpeg"
+    },
+    {
+        "id": 9,
+        "tipo": "Resosrtes Continuos",
+        "medida": "1 plaza y media",
+        "precio": 18000,
+        "marca": "Super Descanso",
+        "imagen": "sueñodorado.jpeg"
+    },
+    {
+        "id": 10,
+        "tipo": "Espuma De Alta Densidad",
+        "medida": "2 plazas",
+        "precio": 70000,
+        "marca": "Maxiking",
+        "imagen": "sueñodorado.jpeg"
+    },
+    {
+        "id": 11,
+        "tipo": "Espuma De Alta Densidad",
+        "medida": "2 plazas",
+        "precio": 112000,
+        "marca": "Elegante",
+        "imagen": "sueñodorado.jpeg"
+    },
+    {
+        "id": 12,
+        "tipo": "Espuma De Alta Densidad",
+        "medida": "2 plazas",
+        "precio": 200000,
+        "marca": "Sueño Dorado",
+        "imagen": "sueñodorado.jpeg"
+    },
+    {
+        "id": 13,
+        "tipo": "Resosrtes Continuos",
+        "medida": "2 plazas",
+        "precio": 240000,
+        "marca": "Super Descanso",
+        "imagen": "sueñodorado.jpeg"
+    },
+    {
+        "id": 14,
+        "tipo": "Espuma De Alta Densidad",
+        "medida": "Queen",
+        "precio": 350000,
+        "marca": "Super Descanso",
+        "imagen": "sueñodorado.jpeg"
+    },
+    {
+        "id": 15,
+        "tipo": "Espuma De Alta Densidad",
+        "medida": "Queen",
+        "precio": 450000,
+        "marca": "Sueño Dorado",
+        "imagen": "sueñodorado.jpeg"
+    },
+    {
+        "id": 16,
+        "tipo": "Espuma De Alta Densidad",
+        "medida": "Queen",
+        "precio": 650000,
+        "marca": "Cannon",
+        "imagen": "sueñodorado.jpeg"
+    },
+    {
+        "id": 17,
+        "tipo": "Resosrtes Continuos",
+        "medida": "Queen",
+        "precio": 380000,
+        "marca": "Elegante",
+        "imagen": "sueñodorado.jpeg"
+    },
+    {
+        "id": 18,
+        "tipo": "Espuma De Alta Densidad",
+        "medida": "King",
+        "precio": 500000,
+        "marca": "Cannon",
+        "imagen": "sueñodorado.jpeg"
+    },
+    {
+        "id": 19,
+        "tipo": "Resosrtes Continuos",
+        "medida": "King",
+        "precio": 536000,
+        "marca": "Maxiking",
+        "imagen": "sueñodorado.jpeg"
+    },
+    {
+        "id": 20,
+        "tipo": "Resosrtes Continuos",
+        "medida": "King",
+        "precio": 836000,
+        "marca": "Super Descanso",
+        "imagen": "sueñodorado.jpeg"
+    },
+    {
+        "id": 21,
+        "tipo": "Resosrtes Continuos",
+        "medida": "King",
+        "precio": 636000,
+        "marca": "Elegante",
+        "imagen": "sueñodorado.jpeg"
+    }
+]

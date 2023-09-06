@@ -10,15 +10,14 @@
 
 <body>
     <header>
-        <h1>Merino Muebles</h1>
-        <p>Bienvenido a nuestra tienda</p>
+        <img src="./logo.png" alt="Merino Muebles Logo" id="logo">
     </header>
 
     <section>
-        <h2>Nuestros Productos</h2>
-        <label for="medida">Medida:</label>
+        <h2>Nuestros Colchones!!</h2>
+        <label for="medida">Elija la medida de colchon que desea</label>
         <select id="medida">
-            <option value="todas">Todas</option>
+            <option value="todas">Todas Las Medidas</option>
             <option value="1 plaza">1 plaza</option>
             <option value="1 plaza y media">1 plaza y media</option>
             <option value="2 plazas">2 plazas</option>
@@ -30,18 +29,16 @@
     </section>
 
     <section>
-
         <div id="carrito">
+            <img src="./carro.png" alt="Carrito de Compras" id="carritoIcono">
             <div id="carritoList"></div>
             <p id="total">Total: $0</p>
             <button id="finalizarBtn">Finalizar Compra</button>
         </div>
     </section>
-
     
-   
-<script src="main.js"></script>
-
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>   
+    <script src="main.js"></script>
 </body>
 
 </html>

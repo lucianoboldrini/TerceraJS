@@ -1,38 +1,27 @@
-//Crear Constructor 
+// Clase para representar un colchón
 class Colchon {
-    constructor(id, tipo, medida, precio, marca) {
+    constructor(id, tipo, medida, precio, marca, imagen) {
         this.id = id;
         this.tipo = tipo;
         this.medida = medida;
         this.precio = precio;
         this.marca = marca;
+        this.imagen = imagen; // Ruta de la imagen del colchón
     }
 }
 
-// Crear un array de objetos Colchon
-const colchones = [
-    new Colchon(1, "Espuma De Alta Densidad", "1 plaza", 10000, "Cannon"),
-    new Colchon(2, "Resosrtes Continuos", "1 plaza", 12000, "Maxiking"),
-    new Colchon(3, "Resosrtes Continuos", "1 plaza", 188000, "Super Descanso"),
-    new Colchon(4, "Espuma De Alta Densidad", "1 plaza", 120600, "Elegante"),
-    new Colchon(5, "Espuma De Alta Densidad", "1 plaza y media", 15200, "Sueño Dorado"),
-    new Colchon(6, "Espuma De Alta Densidad", "1 plaza y media", 150000, "Maxiking"),
-    new Colchon(7, "Espuma De Alta Densidad", "1 plaza y media", 207000, "Elegante"),
-    new Colchon(8, "Espuma De Alta Densidad", "1 plaza y media", 81000, "Cannon"),
-    new Colchon(9, "Resosrtes Continuos", "1 plaza y media", 18000, "Super Descanso"),
-    new Colchon(10, "Espuma De Alta Densidad", "2 plazas", 70000, "Maxiking"),
-    new Colchon(11, "Espuma De Alta Densidad", "2 plazas", 112000, "Elegante"),
-    new Colchon(12, "Espuma De Alta Densidad", "2 plazas", 200000, "Sueño Dorado"),
-    new Colchon(13, "Resosrtes Continuos", "2 plazas", 240000, "Super Descanso"),
-    new Colchon(14, "Espuma De Alta Densidad", "Queen", 350000, "Super Descanso"),
-    new Colchon(15, "Espuma De Alta Densidad", "Queen", 450000, "Sueño Dorado"),
-    new Colchon(16, "Espuma De Alta Densidad", "Queen", 650000, "Cannon"),
-    new Colchon(17, "Resosrtes Continuos", "Queen", 380000, "Elegante"),
-    new Colchon(18, "Espuma De Alta Densidad", "King", 500000, "Cannon"),
-    new Colchon(19,"Resosrtes Continuos","King" ,536000,"Maxiking" ),
-    new Colchon(20,"Resosrtes Continuos","King" ,836000,"Super Descanso" ),
-    new Colchon(21,"Resosrtes Continuos","King" ,636000,"Elegante" ),
-];
+let colchones = []; // Array que almacenará los colchones cargados desde el JSON
+
+window.addEventListener('load', () => {
+    fetch('data.json')
+        .then(response => response.json())
+        .then(data => {
+            colchones = data; // Cargar los colchones desde el JSON
+            mostrarColchonesEnDOM(colchones);
+        })
+        .catch(error => console.error('Error cargando data.json', error));
+});
+
 // Obtener referencias a elementos del DOM
 const medidaSelect = document.getElementById("medida");
 const buscarBtn = document.getElementById("buscarBtn");
@@ -51,6 +40,7 @@ function filtrarColchonesPorMedida(medida) {
         return colchones.filter(colchon => colchon.medida.toLowerCase() === medida);
     }
 }
+
 // Función para mostrar colchones en el DOM
 function mostrarColchonesEnDOM(colchonesMostrados) {
     colchonesList.innerHTML = ""; // Limpiar la lista antes de mostrar los colchones
@@ -59,6 +49,10 @@ function mostrarColchonesEnDOM(colchonesMostrados) {
         colchonesMostrados.forEach(colchon => {
             const colchonDiv = document.createElement("div");
             colchonDiv.classList.add("colchon");
+
+            const imagen = document.createElement("img"); // Agregar la imagen
+            imagen.src = colchon.imagen; // Ruta de la imagen
+            imagen.alt = colchon.tipo; // Texto alternativo para la imagen
 
             const titulo = document.createElement("p");
             titulo.textContent = colchon.tipo;
@@ -76,6 +70,7 @@ function mostrarColchonesEnDOM(colchonesMostrados) {
             agregarBtn.textContent = "Agregar al Carrito";
             agregarBtn.addEventListener("click", () => agregarAlCarrito(colchon));
 
+            colchonDiv.appendChild(imagen); // Agregar la imagen al div del colchón
             colchonDiv.appendChild(titulo);
             colchonDiv.appendChild(medida);
             colchonDiv.appendChild(precio);
@@ -89,7 +84,7 @@ function mostrarColchonesEnDOM(colchonesMostrados) {
     }
 }
 
-// Función para actualizar el carrito con los precios según los artículos que agregue
+// Función para actualizar el carrito con los precios según los artículos que se agregaron
 function actualizarCarrito() {
     carritoList.innerHTML = ""; // Limpiar la lista antes de mostrar los productos
     let total = 0;
@@ -190,13 +185,24 @@ window.addEventListener("load", () => {
         actualizarCarrito();
     }
 });
+
 // Obtener referencia al botón de finalizar compra
 const finalizarBtn = document.getElementById("finalizarBtn");
 
 // Manejador de evento para el botón de finalizar compra
+// Utilizo Sweet Alert2 para mostrar una alerta de "Gracias por su compra"
 finalizarBtn.addEventListener("click", () => {
-    alert("¡Muchas gracias por tu compra!");
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: '¡Muchas Gracias Por Su Compra!',
+        showConfirmButton: false,
+        timer: 2500
+    });
+
     carrito.length = 0; // Vaciar el carrito
     localStorage.setItem("carrito", JSON.stringify(carrito)); // Guardar el carrito vacío en el almacenamiento local
-    location.reload();
+    setTimeout(() => {
+        location.reload(); // Recargar la página después de 1 segundo más que la alerta
+    }, 2501);
 });

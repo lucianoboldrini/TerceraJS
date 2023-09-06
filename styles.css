@@ -1,7 +1,8 @@
-/* todos los estilos de la sección de la tienda */
+/* Estilos generales */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,600&display=swap');
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Nunito', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -10,76 +11,133 @@ body {
 header {
   background-color: #333;
   color: white;
-  text-align: center;
   padding: 1em 0;
+  text-align: center;
 }
-
+#logo {
+  
+  height: auto; /* Altura automática para mantener la proporción */
+  margin-right: 10px; /* Espaciado a la derecha del logo */
+  opacity: 0.7; /* Opacidad del logo (puedes ajustar el valor) */
+}
+/* Estilos para la sección de la tienda */
 section {
   margin: 2em;
+  display: flex;
+  flex-direction: column; /* Cambio la dirección del flujo a vertical */
+  align-items: center; /* Centrar elementos horizontalmente */
+  text-align: center; /* Centrar texto */
 }
 
 section h2 {
+  font-family: 'Nunito', sans-serif;
   font-size: 1.5em;
   color: #333;
   margin-bottom: 0.5em;
 }
 
-select, button {
-  margin-right: 1em;
-}
-
-select {
+/* Estilo para la etiqueta del menú desplegable "Medida" */
+label[for="medida"] {
+  font-family: 'Nunito', sans-serif;
   font-size: 1.2em;
   color: #333;
-  margin-bottom: 0.5em;
-  padding: 0.5em;
+  margin-right: 0.5em;
+}
+
+/* Estilo para el menú desplegable "Medida" */
+select#medida {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.2em;
+  color: #333;
+  margin-right: 0.5em;
+  padding: 0.5em 1em;
   border: 1px solid #ddd;
+  margin-top: 0.5em; /* Agregado para separar del botón "Buscar" */
 }
 
-option {
-  padding: 0.5em;
-}
-
+/* Estilo para el botón "Buscar" */
 button#buscarBtn {
-    background-color: #4CAF50; 
-    color:white ;
-    border:none ;
-    padding :0.5em 1em ;
-    cursor:pointer ;
-    height :3.3em ;
-    transition: all .2s ease-in-out;
+  font-family: 'Nunito', sans-serif;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 0.5em 1.5em;
+  cursor: pointer;
+  margin-top: 0.5em; /* Agregado para separar del menú desplegable */
 }
 
-button#buscarBtn:hover {
-    transform: scale(1.1);
-}
-
+/* Estilo para el contenedor de cada colchón (card) */
 .colchon {
-    background-color:#f9f9f9 ;
-    border :1px solid #ddd ;
-    padding :1em ;
-    margin-bottom :1em
+  display: inline-block;
+  vertical-align: top;
+  width: calc(25% - 20px);
+  margin: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #fff;
+  text-align: center;
+  padding: 10px;
 }
 
-.colchon h2 {
-    margin-top :0
+/* Estilo para la imagen del colchón */
+.colchon img {
+  max-width: 100%;
+  height: auto;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  max-height: 150px;
+}
+
+/* Estilo para el título del colchón */
+.colchon p {
+  font-weight: bold;
+  margin: 10px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Estilo para los detalles adicionales del colchón (medida, precio, marca, etc.) */
+.colchon .detalle {
+  margin: 5px 0;
 }
 
 .colchon button {
-    background-color:#4CAF50 ;
-    color:white ;
-    border:none ;
-    padding :0.5em 1em ;
-    cursor:pointer
-}
-.colchon-carrito button {
+  font-family: 'Nunito', sans-serif;
   background-color: #4CAF50;
   color: white;
   border: none;
   padding: 0.5em 1em;
   cursor: pointer;
-  margin-right: 0.5em;
 }
+
+.colchon button:hover {
+  transform: scale(1.1);
+}
+/* Estilos para el carrito de compras */
+#carrito {
+  border: 1px solid #ddd;
+  padding: 1em;
+  background-color: #f9f9f9;
+  position: fixed;
+  right: 2em;
+  top: 2em;
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  width: 250px; /* Ancho del carrito */
+}
+
+#carritoList {
+  max-height: 300px;
+  overflow: auto;
+}
+
+#total {
+  font-weight: bold;
+  margin-top: 1em;
+}
+
 #finalizarBtn {
   background-color: #4CAF50;
   color: white;
@@ -87,25 +145,12 @@ button#buscarBtn:hover {
   padding: 0.5em 1em;
   cursor: pointer;
   margin-top: 1em;
+  width: 100%;
+  border-radius: 4px; /* Bordes redondeados */
+  transition: background-color 0.3s ease-in-out;
 }
 
 #finalizarBtn:hover {
-  transform: scale(1.1);
-}
-.colchon button:hover {
-    transform: scale(1.1);
-}
-
-#carrito {
-    border :1px solid #ddd ;
-    padding :1em ;
-    background-color:#f9f9f9 ;
-    position :fixed ;
-    right :2em ;
-    top :2em 
-}
-
-#carritoList {
-    max-height :300px ;
-    overflow:auto
+  background-color: #45a049; /* Cambio de color al pasar el mouse */
+  transform: scale(1.05); /* Efecto de escala al pasar el mouse */
 }
