@@ -14,19 +14,20 @@ header {
   padding: 1em 0;
   text-align: center;
 }
+
 #logo {
-  
-  height: auto; /* Altura automática para mantener la proporción */
-  margin-right: 10px; /* Espaciado a la derecha del logo */
-  opacity: 0.7; /* Opacidad del logo (puedes ajustar el valor) */
+  height: auto;
+  margin-right: 10px;
+  opacity: 0.7;
 }
+
 /* Estilos para la sección de la tienda */
 section {
   margin: 2em;
   display: flex;
-  flex-direction: column; /* Cambio la dirección del flujo a vertical */
-  align-items: center; /* Centrar elementos horizontalmente */
-  text-align: center; /* Centrar texto */
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 section h2 {
@@ -36,15 +37,7 @@ section h2 {
   margin-bottom: 0.5em;
 }
 
-/* Estilo para la etiqueta del menú desplegable "Medida" */
-label[for="medida"] {
-  font-family: 'Nunito', sans-serif;
-  font-size: 1.2em;
-  color: #333;
-  margin-right: 0.5em;
-}
-
-/* Estilo para el menú desplegable "Medida" */
+label[for="medida"],
 select#medida {
   font-family: 'Nunito', sans-serif;
   font-size: 1.2em;
@@ -52,10 +45,9 @@ select#medida {
   margin-right: 0.5em;
   padding: 0.5em 1em;
   border: 1px solid #ddd;
-  margin-top: 0.5em; /* Agregado para separar del botón "Buscar" */
+  margin-top: 0.5em;
 }
 
-/* Estilo para el botón "Buscar" */
 button#buscarBtn {
   font-family: 'Nunito', sans-serif;
   background-color: #4CAF50;
@@ -63,10 +55,9 @@ button#buscarBtn {
   border: none;
   padding: 0.5em 1.5em;
   cursor: pointer;
-  margin-top: 0.5em; /* Agregado para separar del menú desplegable */
+  margin-top: 0.5em;
 }
 
-/* Estilo para el contenedor de cada colchón (card) */
 .colchon {
   display: inline-block;
   vertical-align: top;
@@ -80,7 +71,6 @@ button#buscarBtn {
   padding: 10px;
 }
 
-/* Estilo para la imagen del colchón */
 .colchon img {
   max-width: 100%;
   height: auto;
@@ -89,7 +79,6 @@ button#buscarBtn {
   max-height: 150px;
 }
 
-/* Estilo para el título del colchón */
 .colchon p {
   font-weight: bold;
   margin: 10px 0;
@@ -98,7 +87,6 @@ button#buscarBtn {
   white-space: nowrap;
 }
 
-/* Estilo para los detalles adicionales del colchón (medida, precio, marca, etc.) */
 .colchon .detalle {
   margin: 5px 0;
 }
@@ -115,6 +103,7 @@ button#buscarBtn {
 .colchon button:hover {
   transform: scale(1.1);
 }
+
 /* Estilos para el carrito de compras */
 #carrito {
   border: 1px solid #ddd;
@@ -123,9 +112,9 @@ button#buscarBtn {
   position: fixed;
   right: 2em;
   top: 2em;
-  border-radius: 8px; /* Bordes redondeados */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
-  width: 250px; /* Ancho del carrito */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 250px;
 }
 
 #carritoList {
@@ -146,11 +135,66 @@ button#buscarBtn {
   cursor: pointer;
   margin-top: 1em;
   width: 100%;
-  border-radius: 4px; /* Bordes redondeados */
+  border-radius: 4px;
   transition: background-color 0.3s ease-in-out;
 }
 
 #finalizarBtn:hover {
-  background-color: #45a049; /* Cambio de color al pasar el mouse */
-  transform: scale(1.05); /* Efecto de escala al pasar el mouse */
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+/* Media Queries para tablet */
+@media (max-width: 1100px) {
+  #logo {
+    width: 50%;
+    max-width: 150px;
+  }
+
+  section {
+    margin: 1em;
+  }
+
+  section h2 {
+    font-size: 1.2em;
+  }
+
+  .colchon {
+    width: calc(50% - 10px);
+  }
+
+  #carrito {
+    width: 10%;
+    max-width: 100px;
+  }
+}
+
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+  /* Estilos para tamaños de pantalla más pequeños */
+
+  section {
+    margin: 1em;
+  }
+
+  section h2 {
+    font-size: 1.2em;
+  }
+
+  .colchon {
+    width: calc(50% - 10px);
+  }
+
+  #carrito {
+    width: 10%;
+    max-width: 100px;
+  }
+}
+
+@media (max-width: 615px) {
+  #carrito {
+    opacity: 20%;
+  }
+
 }

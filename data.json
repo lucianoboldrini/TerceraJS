@@ -5,7 +5,7 @@
         "medida": "1 plaza",
         "precio": 10000,
         "marca": "Cannon",
-        "imagen": "sueñodorado.jpeg"
+        "imagen": "./assets/img/canon.jpg"
 
     },
     {
@@ -14,7 +14,7 @@
         "medida": "1 plaza",
         "precio": 12000,
         "marca": "Maxiking",
-        "imagen": "maxiking.jpeg"
+        "imagen": "./assets/img/maxiking.jpeg"
     },
     {
         "id": 3,
@@ -22,7 +22,7 @@
         "medida": "1 plaza",
         "precio": 188000,
         "marca": "Super Descanso",
-        "imagen": "superdescanso.jpeg"
+        "imagen": "./assets/img/superdescanso.jpeg"
     },
     {
         "id": 4,
@@ -30,7 +30,7 @@
         "medida": "1 plaza",
         "precio": 120600,
         "marca": "Elegante",
-        "imagen": "sueñodorado.jpeg"
+        "imagen": "./assets/img/elegantec.jpg"
     },
     {
         "id": 5,
@@ -38,7 +38,7 @@
         "medida": "1 plaza y media",
         "precio": 15200,
         "marca": "Sueño Dorado",
-        "imagen": "sueñodorado.jpeg"
+        "imagen": "./assets/img/sueñodorado.jpeg"
     },
     {
         "id": 6,
@@ -46,7 +46,7 @@
         "medida": "1 plaza y media",
         "precio": 150000,
         "marca": "Maxiking",
-        "imagen": "sueñodorado.jpeg"
+        "imagen": "./assets/img/maxiking.jpeg"
     },
     {
         "id": 7,
@@ -54,7 +54,7 @@
         "medida": "1 plaza y media",
         "precio": 207000,
         "marca": "Elegante",
-        "imagen": "sueñodorado.jpeg"
+        "imagen": "./assets/img/elegante.jpg"
     },
     {
         "id": 8,
@@ -62,7 +62,7 @@
         "medida": "1 plaza y media",
         "precio": 81000,
         "marca": "Cannon",
-        "imagen": "sueñodorado.jpeg"
+        "imagen": "./assets/img/canon.jpg"
     },
     {
         "id": 9,
@@ -70,7 +70,7 @@
         "medida": "1 plaza y media",
         "precio": 18000,
         "marca": "Super Descanso",
-        "imagen": "sueñodorado.jpeg"
+        "imagen": "./assets/img/superdescanso.jpeg"
     },
     {
         "id": 10,
@@ -78,7 +78,7 @@
         "medida": "2 plazas",
         "precio": 70000,
         "marca": "Maxiking",
-        "imagen": "sueñodorado.jpeg"
+        "imagen": "./assets/img/maxiking.jpeg"
     },
     {
         "id": 11,
@@ -86,7 +86,7 @@
         "medida": "2 plazas",
         "precio": 112000,
         "marca": "Elegante",
-        "imagen": "sueñodorado.jpeg"
+        "imagen": "./assets/img/elegantec.jpg"
     },
     {
         "id": 12,
@@ -94,7 +94,7 @@
         "medida": "2 plazas",
         "precio": 200000,
         "marca": "Sueño Dorado",
-        "imagen": "sueñodorado.jpeg"
+        "imagen": "./assets/img/sueñodorado.jpeg"
     },
     {
         "id": 13,
@@ -102,7 +102,7 @@
         "medida": "2 plazas",
         "precio": 240000,
         "marca": "Super Descanso",
-        "imagen": "sueñodorado.jpeg"
+        "imagen": "./assets/img/superdescanso.jpeg"
     },
     {
         "id": 14,
@@ -110,7 +110,7 @@
         "medida": "Queen",
         "precio": 350000,
         "marca": "Super Descanso",
-        "imagen": "sueñodorado.jpeg"
+        "imagen": "./assets/img/superdescanso.jpeg"
     },
     {
         "id": 15,
@@ -118,7 +118,7 @@
         "medida": "Queen",
         "precio": 450000,
         "marca": "Sueño Dorado",
-        "imagen": "sueñodorado.jpeg"
+        "imagen": "./assets/img/sueñodorado.jpeg"
     },
     {
         "id": 16,
@@ -126,7 +126,7 @@
         "medida": "Queen",
         "precio": 650000,
         "marca": "Cannon",
-        "imagen": "sueñodorado.jpeg"
+        "imagen": "./assets/img/canon.jpg"
     },
     {
         "id": 17,
@@ -134,7 +134,7 @@
         "medida": "Queen",
         "precio": 380000,
         "marca": "Elegante",
-        "imagen": "sueñodorado.jpeg"
+        "imagen": "./assets/img/elegantec.jpg"
     },
     {
         "id": 18,
@@ -142,7 +142,7 @@
         "medida": "King",
         "precio": 500000,
         "marca": "Cannon",
-        "imagen": "sueñodorado.jpeg"
+        "imagen": "./assets/img/canon.jpg"
     },
     {
         "id": 19,
@@ -150,7 +150,7 @@
         "medida": "King",
         "precio": 536000,
         "marca": "Maxiking",
-        "imagen": "sueñodorado.jpeg"
+        "imagen": "./assets/img/maxiking.jpeg"
     },
     {
         "id": 20,
@@ -158,7 +158,7 @@
         "medida": "King",
         "precio": 836000,
         "marca": "Super Descanso",
-        "imagen": "sueñodorado.jpeg"
+        "imagen": "./assets/img/superdescanso.jpeg"
     },
     {
         "id": 21,
@@ -166,6 +166,6 @@
         "medida": "King",
         "precio": 636000,
         "marca": "Elegante",
-        "imagen": "sueñodorado.jpeg"
+        "imagen": "./assets/img/elegante.jpg"
     }
 ]
