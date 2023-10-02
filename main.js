@@ -11,26 +11,25 @@ class Colchon {
 }
 
 let colchones = []; // Array que almacenará los colchones cargados desde el JSON
+let carrito = []; // Array para el carrito de compras
 
-window.addEventListener('load', () => {
+// Función para cargar los colchones desde el JSON
+function cargarColchones() {
     fetch('data.json')
         .then(response => response.json())
         .then(data => {
             colchones = data; // Cargar los colchones desde el JSON
             mostrarColchonesEnDOM(colchones);
+
+            // Recuperar el carrito de localStorage al cargar la página
+            const carritoGuardado = localStorage.getItem("carrito");
+            if (carritoGuardado) {
+                carrito = JSON.parse(carritoGuardado);
+                actualizarCarrito();
+            }
         })
         .catch(error => console.error('Error cargando data.json', error));
-});
-
-// Obtener referencias a elementos del DOM
-const medidaSelect = document.getElementById("medida");
-const buscarBtn = document.getElementById("buscarBtn");
-const colchonesList = document.getElementById("colchonesList");
-const carritoList = document.getElementById("carritoList");
-const totalElement = document.getElementById("total");
-
-// Inicializar el carrito de compras
-const carrito = [];
+}
 
 // Función para filtrar colchones por medida
 function filtrarColchonesPorMedida(medida) {
@@ -88,7 +87,7 @@ function mostrarColchonesEnDOM(colchonesMostrados) {
 function actualizarCarrito() {
     carritoList.innerHTML = ""; // Limpiar la lista antes de mostrar los productos
     let total = 0;
-    
+
     // Crear un objeto para contar la cantidad de cada producto en el carrito
     const cantidadProductos = {};
     carrito.forEach(colchon => {
@@ -98,11 +97,11 @@ function actualizarCarrito() {
             cantidadProductos[colchon.id] = 1;
         }
     });
-    
+
     // Mostrar cada producto en el carrito con su cantidad y precio
     Object.keys(cantidadProductos).forEach(id => {
         const colchon = colchones.find(colchon => colchon.id === parseInt(id));
-        
+
         const colchonCarritoDiv = document.createElement("div");
         colchonCarritoDiv.classList.add("colchon-carrito");
 
@@ -137,11 +136,11 @@ function actualizarCarrito() {
 
         total += colchon.precio * cantidadProductos[id];
     });
-    
+
     localStorage.setItem("carrito", JSON.stringify(carrito));
 
     totalElement.textContent = `Total: $${total}`;
-    
+
     // Mostrar u ocultar el botón de finalizar compra según si hay productos en el carrito
     if (carrito.length > 0) {
         finalizarBtn.style.display = "block";
@@ -165,25 +164,21 @@ function quitarDelCarrito(colchon) {
     }
 }
 
+// Obtener referencias a elementos del DOM
+const medidaSelect = document.getElementById("medida");
+const buscarBtn = document.getElementById("buscarBtn");
+const colchonesList = document.getElementById("colchonesList");
+const carritoList = document.getElementById("carritoList");
+const totalElement = document.getElementById("total");
+
+// Inicializar el carrito de compras
+cargarColchones();
+
 // Manejador de evento para el botón de búsqueda
 buscarBtn.addEventListener("click", () => {
     const medidaSeleccionada = medidaSelect.value.toLowerCase();
     const colchonesFiltrados = filtrarColchonesPorMedida(medidaSeleccionada);
     mostrarColchonesEnDOM(colchonesFiltrados);
-});
-
-// Mostrar todos los colchones en el DOM al cargar la página
-window.addEventListener("load", () => {
-    mostrarColchonesEnDOM(colchones);
-});
-
-// Recuperar el carrito de localStorage al cargar la página
-window.addEventListener("load", () => {
-    const carritoGuardado = localStorage.getItem("carrito");
-    if (carritoGuardado) {
-        carrito.push(...JSON.parse(carritoGuardado));
-        actualizarCarrito();
-    }
 });
 
 // Obtener referencia al botón de finalizar compra
